@@ -1,0 +1,42 @@
+<div *ngIf="product" class="product-details">
+  <!-- Main product image -->
+  <div class="main-image">
+    <img [src]="product.thumbnail" alt="{{ product.title }}" />
+  </div>
+
+  <!-- Product title -->
+  <h1>{{ product.title }}</h1>
+
+  <!-- Product description -->
+  <p class="description">{{ product.description }}</p>
+
+  <!-- Product category and brand -->
+  <div class="product-info">
+    <p><strong>Category:</strong> {{ product.category }}</p>
+    <p><strong>Brand:</strong> {{ product.brand }}</p>
+  </div>
+
+  <!-- Product rating -->
+  <div class="rating">
+    <p>
+      <strong>Rating:</strong>
+      <span class="stars">
+        <span *ngFor="let _ of getStars(product.rating)" class="star filled"
+          >&#9733;</span
+        >
+        <span *ngFor="let _ of getEmptyStars(product.rating)" class="star"
+          >&#9734;</span
+        >
+      </span>
+      {{ product.rating }}
+    </p>
+  </div>
+
+  <!-- Action buttons -->
+  <div class="action-buttons">
+    <button (click)="goBack()" aria-label="Back to Products">
+      Back to Products
+    </button>
+    <button (click)="addToCart()" aria-label="Add to Cart">Add to Cart</button>
+  </div>
+</div>

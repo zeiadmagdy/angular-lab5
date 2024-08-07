@@ -1,0 +1,104 @@
+/* Style for the cart header */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Reset default ul styling */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Container for each cart item */
+li {
+    margin-bottom: 20px;
+}
+
+/* Style for the cart item image */
+.cart-item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Zoom effect on hover for the image */
+.cart-item-image:hover {
+    transform: scale(1.05);
+}
+
+/* Container for the details of each cart item */
+.cart-item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Heading styling for item title */
+.cart-item-details h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* Subtext styling for item details */
+.cart-item-details p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 16px;
+}
+
+/* Styling for the quantity input */
+.cart-item-details input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus effect for quantity input */
+.cart-item-details input[type="number"]:focus {
+    border-color: #333;
+    outline: none;
+}
+
+/* Styling for the remove button */
+.cart-item-details button {
+    background-color: #4168d3;
+    /* Red color for remove button */
+    color: #fff;
+    width: 100px;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Hover effect for the remove button */
+.cart-item-details button:hover {
+    background-color: #e74c3c;
+    transform: scale(1.05);
+}
+
+/* Styling for the total amount section */
+.cart-total {
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    padding: 10px 20px;
+    border-top: 2px solid #ddd;
+}
